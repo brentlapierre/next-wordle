@@ -1,0 +1,11 @@
+.word {
+  display: flex;
+  gap: 6px;
+}
+
+.letter {
+  background-color: #538d4e;
+  padding: 10px 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
