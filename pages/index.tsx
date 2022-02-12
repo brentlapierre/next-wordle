@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 
 import store from '../data/store.json';
 import words from '../data/words.json';
+import fs from 'fs';
 
 import Word from '../components/word';
 
@@ -18,6 +19,10 @@ export async function getServerSideProps () {
   if ((now - store.timestamp) >= 86400000) {
     store.currentWordIndex += 1;
     store.timestamp += 86400000;
+
+    await fs.writeFile(`${__dirname}/../../../data/store.json`, JSON.stringify(store, null, 2), (err) => {
+      
+    });
   }
 
   const wordIndex = store.currentWordIndex;
