@@ -4,8 +4,11 @@
 }
 
 .letter {
+  display: flex;
+  justify-content: center;
+  width: 65px;
   background-color: #538d4e;
-  padding: 10px 20px;
+  padding: 10px;
   font-weight: 600;
   text-transform: uppercase;
 }
